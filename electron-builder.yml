@@ -6,9 +6,7 @@ directories:
 
 files:
   - "!plugins/"
-
-extraResources:
-  - from: "plugins/${os}/${arch}"
+  - from: "plugins/${os}${arch ? '/' + arch : ''}"
     to: "plugins"
     filter:
       - "**/*"
