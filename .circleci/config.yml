@@ -12,7 +12,7 @@ jobs:
       xcode: "14.0.0"
     steps:
       - checkout
-      - run: yarn && yarn release
+      - run: yarn && yarn release --universal
 
 workflows:
   version: 2
