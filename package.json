@@ -4,11 +4,11 @@
   "description": "Launcher oficial de Universal Penguin.",
   "homepage": "https://universalpenguin.xyz",
   "bugs": {
-    "url": "https://github.com/universalpenguin/launcher/issues"
+    "url": "https://github.com/universalpenguin/desktop/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/universalpenguin/launcher/"
+    "url": "https://github.com/universalpenguin/desktop/"
   },
   "license": "MIT",
   "author": "Universal Penguin Team <support@universalpenguin.net>",
