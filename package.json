@@ -1,0 +1,27 @@
+{
+  "name": "universal-penguin",
+  "version": "1.0.0",
+  "description": "Launcher oficial de Universal Penguin.",
+  "homepage": "https://universalpenguin.xyz",
+  "bugs": {
+    "url": "https://github.com/universalpenguin/launcher/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/universalpenguin/launcher/"
+  },
+  "license": "MIT",
+  "author": "Universal Penguin Team <support@universalpenguin.net>",
+  "scripts": {
+    "package": "electron-builder --publish never",
+    "release": "electron-builder --publish always",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.8"
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^24.13.3"
+  }
+}
