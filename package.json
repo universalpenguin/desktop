@@ -1,0 +1,80 @@
+{
+  "name": "universal-penguin",
+  "version": "1.0.0",
+  "description": "Launcher oficial de Universal Penguin.",
+  "homepage": "https://universalpenguin.net",
+  "main": "./src/index.js",
+  "bugs":{
+    "url": "https://github.com/universalpenguin/desktop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/universalpenguin/desktop"
+  },
+  "license": "MIT",
+  "author": "Universal Penguin Team <support@universalpenguin.net>",
+  "scripts": {
+    "package": "electron-builder --publish never",
+    "publish": "electron-builder --publish always",
+    "start": "electron ./src/index.js"
+  },
+  "build": {
+    "appId": "com.universalpenguin.app",
+    "productName": "Universal Penguin",
+    "afterPack": "./src/afterPack.js",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "universalpenguin",
+        "repo": "desktop"
+      }
+    ],
+    "files": [
+      "!flash/"
+    ],
+    "extraResources": [
+      {
+        "from": "flash/${os}/${arch}",
+        "to": "flash",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "deleteAppDataOnUninstall": true
+    },
+    "linux": {
+      "category": "Games",
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    },
+    "protocols": [
+      {
+        "name": "Universal Penguin",
+        "schemes": [
+          "universal-penguin"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "discord-rpc": "^3.2.0",
+    "update-electron-app": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^24.6.3"
+  }
+}
