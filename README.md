@@ -6,14 +6,7 @@ Launcher oficial de Universal Penguin. | Hecho por [Jimmy](https://github.com/Sh
 
 # ¿Cómo lo instalo?
 ## Instala las bibliotecas necesarias
-### Windows and Mac OS
 ```console
-npm install
-```
-### Linux
-```console
-sudo apt update
-sudo apt install build-essential
 npm install
 ```
 ## Modo desarrollo
