@@ -2,8 +2,8 @@ const { app, BrowserWindow, Menu, shell } = require('electron');
 const createMenu = require('./utils/menu');
 const loadFlashPlugin = require('./utils/flash');
 const initRichPresence = require('./utils/discord');
+const { checkForUpdates } = require('./utils/updater');
 const path = require('path');
-if (process.platform !== "darwin") require("update-electron-app").updateElectronApp();
 if (process.platform === "linux") app.commandLine.appendSwitch("no-sandbox");
 loadFlashPlugin(app);
 
@@ -58,13 +58,12 @@ if (!app.requestSingleInstanceLock()) {
   });
 
   app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-      app.quit();
-    }
+    if (process.platform !== 'darwin') app.quit();
   });
 
   app.whenReady().then(() => {
     createWindow();
+    checkForUpdates();
     app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow();
     });

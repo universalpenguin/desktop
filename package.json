@@ -4,7 +4,7 @@
   "description": "Launcher oficial de Universal Penguin.",
   "homepage": "https://universalpenguin.net",
   "main": "./src/index.js",
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/universalpenguin/desktop/issues"
   },
   "repository": {
@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "discord-rpc": "^3.2.0",
-    "update-electron-app": "^3.0.0"
+    "electron-updater": "^6.3.9"
   },
   "devDependencies": {
     "electron": "^11.5.0",
